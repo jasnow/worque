@@ -11,7 +11,7 @@ describe Worque::Command::Todo do
       it 'creates the directory' do
         options = { path: 'tmp/hello/word', for: 'today' }
         Worque::Command::Todo.run(options)
-        assert File.exists?(options[:path])
+        assert File.exist?(options[:path])
       end
     end
 
@@ -22,7 +22,7 @@ describe Worque::Command::Todo do
         Timecop.freeze(Date.new(2016, 7, 15)) do
           Worque::Command::Todo.run(options)
 
-          assert File.exists?("#{options[:path]}/notes-2016-07-14.md")
+          assert File.exist?("#{options[:path]}/notes-2016-07-14.md")
         end
       end
     end

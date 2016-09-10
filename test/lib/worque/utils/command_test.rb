@@ -14,7 +14,7 @@ describe Worque::Utils::Command do
     it 'makes new dir' do
       path = "#{ Dir.pwd }/tmp/hello/world"
       @helper.mkdir(path)
-      assert Dir.exists?(path)
+      assert Dir.exist?(path)
     end
 
     describe 'no permission' do
@@ -25,7 +25,7 @@ describe Worque::Utils::Command do
           @helper.mkdir(path)
         end
 
-        assert !Dir.exists?(path)
+        assert !Dir.exist?(path)
       end
     end
   end
@@ -37,7 +37,7 @@ describe Worque::Utils::Command do
 
       path = 'tmp/text.txt'
       @helper.touch(path)
-      assert File.exists?(path)
+      assert File.exist?(path)
     end
   end
 end
