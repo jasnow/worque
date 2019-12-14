@@ -1,4 +1,5 @@
 ENV['WORQUE_PATH'] = 'tmp/for/test'
+ENV["THOR_SILENCE_DEPRECATION"] = "true"
 
 require 'test_helper'
 require 'worque'
